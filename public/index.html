@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>websocket chatroom</title>
+    <link rel="stylesheet" href="lib/jquery-mCustomScrollbar/css/jquery.mCustomScrollbar.min.css"/>
+    <link rel="stylesheet" href="lib/jquery-emoji/css/jquery.emoji.css"/>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <h1>Websocket Chatroom</h1>
+    <!-- 聊天室主体 -->
+    <main id="main">
+        <div class="main-header"></div>
+        <div class="main-chat">
+            <div class="user-list">
+                <div class="user-own">
+                    <img src="./img/portrait1.jpg" alt="">
+                    <h4></h4>
+                </div>
+                <div class="user-tittle">
+                    <h4>聊天室成员：</h4>
+                </div>
+                <span></span>
+            </div>
+            <div class="chat-container">
+                <div class="chat-content"></div>
+                <div class="chat-message">
+                    <div class="chat-func">
+                        <div class="face"></div>
+                        <div class="screenshot"></div>
+                        <div class="choose-file">
+                            <label for="file"></label>
+                            <input type="file" class="file" id="file">
+                        </div>
+                    </div>
+                    <div class="send-message" contenteditable></div>
+                    <input type="button" value="发送" class="send-btn">
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- 登录界面 -->
+    <div class="login">
+        <h3>用户登录</h3>
+        <div class="login-user">
+            <span>用户名：</span>
+            <input type="text" class="user-name" placeholder="请输入用户名">
+        </div>
+        <div class="portrait-list">
+                <img src="./img/portrait1.jpg" alt="">
+                <img src="./img/portrait2.jpg" alt="">
+                <img src="./img/portrait3.jpeg" alt="">
+                <img src="./img/portrait4.jpg" alt="">
+                <img src="./img/portrait5.jpg" alt="">
+                <img src="./img/portrait6.jpg" alt="">
+        </div>
+        <input type="button" value="登录" class="login-btn">
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="lib/jquery-mCustomScrollbar/script/jquery.mCustomScrollbar.min.js"></script>
+    <script src="lib/jquery-emoji/js/jquery.emoji.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: url(../img/body-background.jpg) no-repeat;
+  background-size: cover;
+}
+input {
+  outline: none;
+}
+h1 {
+  margin-top: 5px;
+  font-size: 48px;
+  font-weight: 600;
+  font-style: italic;
+  color: aliceblue;
+  text-shadow: 2px 2px 3px rgb(209, 206, 206);
+}
+main {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  width: 70%;
+  height: 480px;
+  background-color: #F0F8FF;
+  border-radius: 3px;
+  box-shadow: 0px 0px 8px rgb(96, 96, 96);
+}
+main .main-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background: -webkit-linear-gradient(left bottom, #0091ff, #1fffff);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+main .main-chat {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #F0F8FF;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.main-chat .user-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 240px;
+  height: 100%;
+  border-right: #e4e4e4 solid 1.5px;
+}
+.main-chat .chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+.user-list div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 58px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.user-list div:hover {
+  background-color: rgb(240, 240, 240);
+}
+.pointer {
+  cursor: pointer;
+}
+.user-list div img {
+  margin-right: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
+}
+.user-list div h4 {
+  font-size: 16px;
+  color: black;
+}
+.user-list .user-tittle {
+  height: 30px;
+  border-top: #e4e4e4 solid 1.5px;
+
+}
+.user-list span {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.chat-container .chat-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 65%;
+  border-bottom: #e4e4e4 solid 1.5px;
+}
+.chat-container .chat-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 35%;
+}
+.chat-message .chat-func {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+.chat-func div {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.chat-func .face {
+  background: url(../img/face.png) no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+  cursor: pointer;
+}
+.chat-func .screenshot {
+  background: url(../img/screenshot.png) no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+  cursor: pointer;
+}
+.chat-func .choose-file {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: url(../img/file.png) no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+}
+.choose-file label {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  background: rgb(255, 255, 255);
+}
+.chat-func input {
+  display: none;
+}
+.send-message {
+  flex: 5;
+  width: 100%;
+  outline: none;
+  padding-left: 5px;
+  overflow: auto;
+}
+.send-btn {
+  display: block;
+  flex: 1;
+  align-self: flex-end;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  margin-top: 5px;
+  padding: 2px;
+  width: 55px;
+  font-size: 13px;
+  color: #F0F8FF;
+  background-color: #12B7F5;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+.send-btn:hover {
+  background-color: #0091ff;
+}
+.chat-content .chat-own, .chat-content .chat-member {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 8px;
+  margin-bottom: 5px;
+}
+.chat-own .name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  color: #008057;
+}
+.chat-content .message {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+  color: black;
+  margin-top: 2px;
+}
+.chat-member .name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  color: #0000FF;
+}
+.chat-content .chat-state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(122, 122, 122);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+/* 聊天室登录界面 */
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 70px;
+  width: 40%;
+  height: 420px;
+  background-color: aliceblue;
+  border-radius: 3px;
+}
+.login h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: 500;
+}
+.login .login-user {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.login-user span {
+  margin-bottom: 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.login-user .user-name {
+  width: 300px;
+  height: 36px;
+}
+.login .portrait-list {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 300px;
+  border: darkgrey solid 1.5px;
+  margin-top: 20px;
+}
+.portrait-list img {
+  margin-top: 10px;
+  margin-left: 28px;
+  margin-bottom: 10px;
+  height: 64px;
+  width: 64px;
+}
+
+.portrait-border {
+  border: #1AAD19 solid 1.5px;
+}
+.login-btn {
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  background-color: #1AAD19;
+  color: aliceblue;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+}
+.login-btn:hover {
+  background-color: #008702;
+}
+
